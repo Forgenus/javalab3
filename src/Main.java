@@ -169,43 +169,43 @@ public class Main {
     }
 
     public static void conductTests(int size) {
-        System.out.println("###############################################################################");
-        System.out.println("fill arr no initial capacity with SIZE = " + size + " " + fillNoResizeArray(size).second);
-        System.out.println("fill arr with initial capacity with SIZE = " + size + " " + fillResizeArray(size).second);
+        System.out.println("START TESTING WITH SIZE = "+size/1000+"k");
+        System.out.println("fill arr no initial capacity with SIZE = " + size/1000+"k" + " " + fillNoResizeArray(size).second);
+        System.out.println("fill arr with initial capacity with SIZE = " + +size/1000+"k" + " " + fillResizeArray(size).second);
 
         System.out.println("\n\n");
 
-        System.out.println("remove half of the elements from array from the start with SIZE = " + size + " "
+        System.out.println("remove half of the elements from array from the start with SIZE = " + size/1000+"k" + " "
                 + deleteConcurrentForwardArray(size, size / 2));
-        System.out.println("remove half of the elements from list from the start with SIZE = " + size + " "
+        System.out.println("remove half of the elements from list from the start with SIZE = " + size/1000+"k" + " "
                 + deleteConcurrentForwardList(size, size / 2));
 
         System.out.println("\n\n");
 
-        System.out.println("remove half of the elements from array from the end with SIZE = " + size + " "
+        System.out.println("remove half of the elements from array from the end with SIZE = " + size/1000+"k" + " "
                 + deleteConcurrentReverseArray(size, size / 2));
-        System.out.println("remove half of the elements from list from the end with SIZE = " + size + " "
+        System.out.println("remove half of the elements from list from the end with SIZE = " + size/1000+"k" + " "
                 + deleteConcurrentReverseList(size, size / 2));
 
         System.out.println("\n\n");
 
-        System.out.println("remove half of the elements from array randomly with SIZE = " + size + " "
+        System.out.println("remove half of the elements from array randomly with SIZE = " + size/1000+"k" + " "
                 + deleteRandomArray(size, size / 2));
-        System.out.println("remove half of the elements from list randomly with SIZE = " + size + " "
+        System.out.println("remove half of the elements from list randomly with SIZE = " + size/1000+"k"+ " "
                 + deleteRandomList(size, size / 2));
 
         System.out.println("\n\n");
 
-        System.out.println("get half of the elements from array with SIZE = " + size + " "
+        System.out.println("get half of the elements from array with SIZE = " + size/1000+"k" + " "
                 + getArray(size, size / 2));
 
         System.out.println("\n\n");
 
-        System.out.println("get half of the elements from list close to start with SIZE = " + size + " "
+        System.out.println("get half of the elements from list close to start with SIZE = " + size/1000+"k" + " "
                 + getCloseToStart(size, size / 2));
-        System.out.println("get half of the elements from list close to End with SIZE = " + size + " "
+        System.out.println("get half of the elements from list close to End with SIZE = " + size/1000+"k" + " "
                 + getCloseToEnd(size, size / 2));
-        System.out.println("get half of the elements from list randomly with SIZE = " + size + " "
+        System.out.println("get half of the elements from list randomly with SIZE = " + size/1000+"k" + " "
                 + getRandomList(size, size / 2));
 
     }
@@ -213,7 +213,7 @@ public class Main {
 
     public static final int thousand = 1000;
 
-    static List<Integer> testSizes = new ArrayList<>(Arrays.asList(thousand, thousand * 10, thousand * 100, thousand * 1000, thousand * 10000));
+    static List<Integer> testSizes = new ArrayList<>(Arrays.asList(thousand, thousand * 10, thousand * 100));
 
     public static void main(String[] args) {
         for(var size : testSizes){
